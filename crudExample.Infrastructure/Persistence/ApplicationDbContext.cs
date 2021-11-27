@@ -12,7 +12,7 @@ namespace crudExample.Infrastructure.Persistence
         }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<UserTask> userTasks { get; set; }
+        public DbSet<UserTask> UserTasks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

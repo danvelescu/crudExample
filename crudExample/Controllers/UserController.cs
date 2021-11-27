@@ -3,6 +3,8 @@ using crudExample.Application.Users.Dto;
 using crudExample.Application.Users.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace crudExample.Controllers
 {

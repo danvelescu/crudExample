@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  crudexample:
+    image: ${DOCKER_REGISTRY-}crudexample
+    container_name: backend
+    build:
+      context: .
+      dockerfile: crudExample/Dockerfile
+
+  ms-sql-server:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "SuperSecret!!"
+      MSSQL_PID: Express
+    ports:
+      - "5433:1433"

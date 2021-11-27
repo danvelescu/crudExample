@@ -8,7 +8,7 @@ namespace crudExample.Domain.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public TaskPriority TaskPriority { get; set; }
-
+        public int? AssignToUserId { get; set; }
         public User AssignToUser { get; set; } 
     }
 }

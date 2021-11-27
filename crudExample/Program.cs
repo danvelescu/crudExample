@@ -1,6 +1,10 @@
 using crudExample.Application;
 using crudExample.Infrastructure.Persistence;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +17,9 @@ services.AddSwaggerGen();
 services.AddRouting();
 services.AddControllers();
 services.AddApplication();
-
+//var provider = services.BuildServiceProvider();
+//var db = provider.GetRequiredService<ApplicationDbContext>();
+//db.Database.Migrate();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
